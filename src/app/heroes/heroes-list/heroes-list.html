@@ -3,5 +3,46 @@
 <div class="card">
     <div class="card-head">
         <h1>HEROES DRAGON BALL</h1>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-2">
+                    Filtrar por:
+                </div>
+                <div class="col-md-4">
+                    <input [(ngModel)]="listFilter"  type="text" class="form-control"
+                    placeholder="Ingrese nombre nombre del Heroe">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Filtro:</h3>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped" *ngIf="heroes.length>0">
+                    <thead>
+                        <tr>
+                            <th><button (click)="showImagen()" class="btn btn-primary">
+                                {{muestraImage?'Ocultar':'Muestra'}}Imagen</button></th>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Raza</th>
+                            <th>Ki</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let heroes of heroes">
+                             <td><img *ngIf='muestraImage' [src]=""heroe.imagen
+                                [style.width.px]="imageWidth"
+                                [style.margin.px]="imageMargin"/></td>
+                            <td>{{heroes.nombre}}</td>
+                            <td>{{heroes.descripcion}}</td>
+                            <td>{{heroes.race}}</td>
+                            <td>{{heroes.ki}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
