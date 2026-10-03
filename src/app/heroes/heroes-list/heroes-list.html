@@ -9,7 +9,7 @@
                     Filtrar por:
                 </div>
                 <div class="col-md-4">
-                    <input [(ngModel)]="listFilter"  type="text" class="form-control"
+                    <input   type="text" class="form-control"
                     placeholder="Ingrese nombre nombre del Heroe">
                 </div>
             </div>
@@ -31,12 +31,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let heroes of heroes">
+                        <tr *ngFor="let heroes of heroes | heroesFilter:listFilter">
                              <td><img *ngIf='muestraImage' [src]=""heroe.imagen
                                 [style.width.px]="imageWidth"
                                 [style.margin.px]="imageMargin"/></td>
                             <td>{{heroes.nombre}}</td>
-                            <td>{{heroes.descripcion}}</td>
+                            <td>{{heroes.description}}</td>
                             <td>{{heroes.race}}</td>
                             <td>{{heroes.ki}}</td>
                         </tr>

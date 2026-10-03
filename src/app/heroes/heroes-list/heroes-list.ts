@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IHeroes } from '../heroes';
 
 @Component({
   selector: 'app-heroes-list',
@@ -16,28 +17,28 @@ showImagen():void{
  this.muestraImage=!this.muestraImage
 }
 
-  heroes:any[]=[
+  heroes:IHeroes[]=[
     {
     imagen:"https://dragonball-api.com/characters/goku_normal.webp",
     nombre:"Goku",
     description:"Hame Hame Haaaaaa",
-    rece:"Saiyan",
+    race:"Saiyan",
     ki:900000
     },
 
     {
     imagen:"https://dragonball-api.com/characters/Jiren.webp",
     nombre:"Jiren",
-     description:"Si no gano, entonces todo mi esfuerzo, todo lo que me he esforzado por lograr, ¡todo habrá sido en vano!",
-    rece:"extraterrestre humanoide",
+    description:"Si no gano, entonces todo mi esfuerzo, todo lo que me he esforzado por lograr, ¡todo habrá sido en vano!",
+    race:"extraterrestre humanoide",
     ki:5000000
     },
 
     {
     imagen:"https://dragonball-api.com/characters/Androide_18_Artwork.webp",
     nombre:"Android 18",
-     description:"Eres un mocoso insoportable",
-    rece:"Humana",
+    description:"Eres un mocoso insoportable",
+    race:"Humana",
     ki:50000
     },
 
@@ -45,7 +46,7 @@ showImagen():void{
     imagen:"https://dragonball-api.com/characters/celula.webp",
     nombre:"Cell",
     description:"Al fin. Todo cuanto imaginé me pertenece ahora. Me he convertido en algo que absolutamente nadie pudo. Soy perfecto",
-    rece:"Bioandroide",
+    race:"Bioandroide",
     ki:100000
     },
 

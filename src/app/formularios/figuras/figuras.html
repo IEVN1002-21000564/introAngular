@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="mb-3">
+                    <form>
+                        <div class="form-group pt-4">
+                            <label for="num1">Base:</label>
+                            <input [(ngModel)]="num1" name="num1" type="text" class="form-control" id="num1"
+                            placeholder="Ingrese número 1">
+                        </div>
+                        <div class="form-group pt-4">
+                            <label for="num2">Altura</label>
+                            <input [(ngModel)]="num2" name="num2" type="text" class="form-control" id="num2"
+                            placeholder="Ingrese número 2">
+                        </div>
+                        <br>
+                       
+                        <input type="radio" name="operacion" [(ngModel)]="figura" value="1"> Triangulo
+                        <input type="radio" name="operacion" [(ngModel)]="figura" value="2"> Rectángulo
+                        <input type="radio" name="operacion" [(ngModel)]="figura" value="3"> Circulo
+                        <input type="radio" name="operacion" [(ngModel)]="figura" value="4"> Pentángono
+ 
+                        <br><br>
+                        <button type="button" (click)="calcularAR()" class="btn btn-primary">Calculadora</button>
+                        
+                        <!-- Resultado movido aquí abajo -->
+                        <div class="mt-3">
+                            <h3>Resultado: {{resultado}}</h3>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>operas-bas works!</p>
+</body>
+</html>
